@@ -1,3 +1,5 @@
+from random import random
+
 import wget
 from selenium import webdriver
 #from selenium.webdriver.common.by import By
@@ -83,3 +85,10 @@ for school in others:
 print(clusters)
 
 #Format is district id, school id, lat, long, total students, swd, [list of the publics in the same format]
+
+with open('heatmap.csv', 'w') as csvfile:
+    writer = csv.writer(csvfile)
+    for cluster in clusters:
+        cluster[2]
+        cluster[3]
+        writer.writerow([cluster[2],cluster[3],0.08+0.07*random()])
