@@ -1,0 +1,516 @@
+y,d,s,g,c,ec,Enroll_Rate,Teacher_Count
+1819,00,0000,Economically Disadvantaged,Economically Disadvantaged,1786136,62.7,176984
+1819,00,0000,English Language Learners,English Language Learners,291407,10.2,176984
+1819,00,0000,Gender,Female,1384411,48.6,176984
+1819,00,0000,Gender,Male,1462446,51.4,176984
+1819,00,0000,Grade Level,PK,64145,2.3,176984
+1819,00,0000,Grade Level,KG,200927,7.1,176984
+1819,00,0000,Grade Level,First,207049,7.3,176984
+1819,00,0000,Grade Level,Second,209182,7.3,176984
+1819,00,0000,Grade Level,Third,221025,7.8,176984
+1819,00,0000,Grade Level,Fourth,214720,7.5,176984
+1819,00,0000,Grade Level,Fifth,223403,7.8,176984
+1819,00,0000,Grade Level,Sixth,219483,7.7,176984
+1819,00,0000,Grade Level,Seventh,220975,7.8,176984
+1819,00,0000,Grade Level,Eighth,213672,7.5,176984
+1819,00,0000,Grade Level,Ninth,221492,7.8,176984
+1819,00,0000,Grade Level,Tenth,216395,7.6,176984
+1819,00,0000,Grade Level,Eleventh,207416,7.3,176984
+1819,00,0000,Grade Level,Twelfth,206973,7.3,176984
+1819,00,0000,Homeless,Homeless,41291,1.5,176984
+1819,00,0000,Migrant,Migrant,13912,0.5,176984
+1819,00,0000,Race/Ethnicity,American Indian/Alaskan Native,8127,0.3,176984
+1819,00,0000,Race/Ethnicity,Asian,78938,2.8,176984
+1819,00,0000,Race/Ethnicity,Black/African American,624435,21.9,176984
+1819,00,0000,Race/Ethnicity,Hispanic,964219,33.9,176984
+1819,00,0000,Race/Ethnicity,Multiracial,102377,3.6,176984
+1819,00,0000,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,4839,0.2,176984
+1819,00,0000,Race/Ethnicity,White,1063922,37.4,176984
+1819,00,0000,Students with Disabilities,Students with Disabilities,401627,14.1,176984
+1819,00,0000,Total,Total Students,2846857,100.0,176984
+1819,09,0000,Economically Disadvantaged,Economically Disadvantaged,10040,64.9,980
+1819,09,0000,English Language Learners,English Language Learners,172,1.1,980
+1819,09,0000,Gender,Female,7494,48.4,980
+1819,09,0000,Gender,Male,7976,51.6,980
+1819,09,0000,Grade Level,PK,465,3.0,980
+1819,09,0000,Grade Level,KG,1092,7.1,980
+1819,09,0000,Grade Level,First,1114,7.2,980
+1819,09,0000,Grade Level,Second,1075,6.9,980
+1819,09,0000,Grade Level,Third,1127,7.3,980
+1819,09,0000,Grade Level,Fourth,1142,7.4,980
+1819,09,0000,Grade Level,Fifth,1185,7.7,980
+1819,09,0000,Grade Level,Sixth,1245,8.0,980
+1819,09,0000,Grade Level,Seventh,1201,7.8,980
+1819,09,0000,Grade Level,Eighth,1140,7.4,980
+1819,09,0000,Grade Level,Ninth,1399,9.0,980
+1819,09,0000,Grade Level,Tenth,1220,7.9,980
+1819,09,0000,Grade Level,Eleventh,1059,6.8,980
+1819,09,0000,Grade Level,Twelfth,1006,6.5,980
+1819,09,0000,Homeless,Homeless,237,1.5,980
+1819,09,0000,Migrant,Migrant,37,0.2,980
+1819,09,0000,Race/Ethnicity,American Indian/Alaskan Native,54,0.3,980
+1819,09,0000,Race/Ethnicity,Asian,252,1.6,980
+1819,09,0000,Race/Ethnicity,Black/African American,713,4.6,980
+1819,09,0000,Race/Ethnicity,Hispanic,1314,8.5,980
+1819,09,0000,Race/Ethnicity,Multiracial,705,4.6,980
+1819,09,0000,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,26,0.2,980
+1819,09,0000,Race/Ethnicity,White,12406,80.2,980
+1819,09,0000,Students with Disabilities,Students with Disabilities,2076,13.4,980
+1819,09,0000,Total,Total Students,15470,100.0,980
+1819,09,0021,Economically Disadvantaged,Economically Disadvantaged,443,65.8,45
+1819,09,0021,English Language Learners,English Language Learners,14,2.1,45
+1819,09,0021,Gender,Female,310,46.1,45
+1819,09,0021,Gender,Male,363,53.9,45
+1819,09,0021,Grade Level,PK,60,8.9,45
+1819,09,0021,Grade Level,KG,108,16.0,45
+1819,09,0021,Grade Level,First,105,15.6,45
+1819,09,0021,Grade Level,Second,89,13.2,45
+1819,09,0021,Grade Level,Third,108,16.0,45
+1819,09,0021,Grade Level,Fourth,103,15.3,45
+1819,09,0021,Grade Level,Fifth,100,14.9,45
+1819,09,0021,Homeless,Homeless,0,0.0,45
+1819,09,0021,Migrant,Migrant,0,0.0,45
+1819,09,0021,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,45
+1819,09,0021,Race/Ethnicity,Asian,13,1.9,45
+1819,09,0021,Race/Ethnicity,Black/African American,26,3.9,45
+1819,09,0021,Race/Ethnicity,Hispanic,29,4.3,45
+1819,09,0021,Race/Ethnicity,Multiracial,32,4.8,45
+1819,09,0021,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,45
+1819,09,0021,Race/Ethnicity,White,572,85.0,45
+1819,09,0021,Students with Disabilities,Students with Disabilities,74,11.0,45
+1819,09,0021,Total,Total Students,673,100.0,45
+1819,09,0025,Economically Disadvantaged,Economically Disadvantaged,512,73.8,46
+1819,09,0025,English Language Learners,English Language Learners,19,2.7,46
+1819,09,0025,Gender,Female,338,48.7,46
+1819,09,0025,Gender,Male,356,51.3,46
+1819,09,0025,Grade Level,PK,39,5.6,46
+1819,09,0025,Grade Level,KG,102,14.7,46
+1819,09,0025,Grade Level,First,108,15.6,46
+1819,09,0025,Grade Level,Second,106,15.3,46
+1819,09,0025,Grade Level,Third,105,15.1,46
+1819,09,0025,Grade Level,Fourth,119,17.1,46
+1819,09,0025,Grade Level,Fifth,115,16.6,46
+1819,09,0025,Homeless,Homeless,0,0.0,46
+1819,09,0025,Migrant,Migrant,0,0.0,46
+1819,09,0025,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,46
+1819,09,0025,Race/Ethnicity,Asian,21,3.0,46
+1819,09,0025,Race/Ethnicity,Black/African American,33,4.8,46
+1819,09,0025,Race/Ethnicity,Hispanic,96,13.8,46
+1819,09,0025,Race/Ethnicity,Multiracial,47,6.8,46
+1819,09,0025,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,46
+1819,09,0025,Race/Ethnicity,White,495,71.3,46
+1819,09,0025,Students with Disabilities,Students with Disabilities,98,14.1,46
+1819,09,0025,Total,Total Students,694,100.0,46
+1819,09,0031,Economically Disadvantaged,Economically Disadvantaged,820,57.1,78
+1819,09,0031,English Language Learners,English Language Learners,11,0.8,78
+1819,09,0031,Gender,Female,679,47.3,78
+1819,09,0031,Gender,Male,758,52.7,78
+1819,09,0031,Grade Level,Ninth,438,30.5,78
+1819,09,0031,Grade Level,Tenth,360,25.1,78
+1819,09,0031,Grade Level,Eleventh,324,22.5,78
+1819,09,0031,Grade Level,Twelfth,315,21.9,78
+1819,09,0031,Homeless,Homeless,30,2.1,78
+1819,09,0031,Migrant,Migrant,0,0.0,78
+1819,09,0031,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,78
+1819,09,0031,Race/Ethnicity,Asian,23,1.6,78
+1819,09,0031,Race/Ethnicity,Black/African American,53,3.7,78
+1819,09,0031,Race/Ethnicity,Hispanic,113,7.9,78
+1819,09,0031,Race/Ethnicity,Multiracial,63,4.4,78
+1819,09,0031,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,78
+1819,09,0031,Race/Ethnicity,White,1181,82.2,78
+1819,09,0031,Students with Disabilities,Students with Disabilities,175,12.2,78
+1819,09,0031,Total,Total Students,1437,100.0,78
+1819,09,0032,Economically Disadvantaged,Economically Disadvantaged,469,71.9,45
+1819,09,0032,English Language Learners,English Language Learners,16,2.5,45
+1819,09,0032,Gender,Female,312,47.9,45
+1819,09,0032,Gender,Male,340,52.1,45
+1819,09,0032,Grade Level,PK,45,6.9,45
+1819,09,0032,Grade Level,KG,108,16.6,45
+1819,09,0032,Grade Level,First,108,16.6,45
+1819,09,0032,Grade Level,Second,88,13.5,45
+1819,09,0032,Grade Level,Third,105,16.1,45
+1819,09,0032,Grade Level,Fourth,105,16.1,45
+1819,09,0032,Grade Level,Fifth,93,14.3,45
+1819,09,0032,Homeless,Homeless,27,4.1,45
+1819,09,0032,Migrant,Migrant,0,0.0,45
+1819,09,0032,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,45
+1819,09,0032,Race/Ethnicity,Asian,20,3.1,45
+1819,09,0032,Race/Ethnicity,Black/African American,34,5.2,45
+1819,09,0032,Race/Ethnicity,Hispanic,45,6.9,45
+1819,09,0032,Race/Ethnicity,Multiracial,26,4.0,45
+1819,09,0032,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,45
+1819,09,0032,Race/Ethnicity,White,522,80.1,45
+1819,09,0032,Students with Disabilities,Students with Disabilities,92,14.1,45
+1819,09,0032,Total,Total Students,652,100.0,45
+1819,09,0035,Economically Disadvantaged,Economically Disadvantaged,484,61.7,52
+1819,09,0035,English Language Learners,English Language Learners,0,0.0,52
+1819,09,0035,Gender,Female,375,47.8,52
+1819,09,0035,Gender,Male,410,52.2,52
+1819,09,0035,Grade Level,PK,47,6.0,52
+1819,09,0035,Grade Level,KG,116,14.8,52
+1819,09,0035,Grade Level,First,122,15.5,52
+1819,09,0035,Grade Level,Second,110,14.0,52
+1819,09,0035,Grade Level,Third,127,16.2,52
+1819,09,0035,Grade Level,Fourth,138,17.6,52
+1819,09,0035,Grade Level,Fifth,125,15.9,52
+1819,09,0035,Homeless,Homeless,0,0.0,52
+1819,09,0035,Migrant,Migrant,0,0.0,52
+1819,09,0035,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,52
+1819,09,0035,Race/Ethnicity,Asian,0,0.0,52
+1819,09,0035,Race/Ethnicity,Black/African American,41,5.2,52
+1819,09,0035,Race/Ethnicity,Hispanic,74,9.4,52
+1819,09,0035,Race/Ethnicity,Multiracial,39,5.0,52
+1819,09,0035,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,52
+1819,09,0035,Race/Ethnicity,White,620,79.0,52
+1819,09,0035,Students with Disabilities,Students with Disabilities,98,12.5,52
+1819,09,0035,Total,Total Students,785,100.0,52
+1819,09,0042,Economically Disadvantaged,Economically Disadvantaged,699,65.7,68
+1819,09,0042,English Language Learners,English Language Learners,0,0.0,68
+1819,09,0042,Gender,Female,524,49.2,68
+1819,09,0042,Gender,Male,540,50.8,68
+1819,09,0042,Grade Level,Sixth,393,36.9,68
+1819,09,0042,Grade Level,Seventh,335,31.5,68
+1819,09,0042,Grade Level,Eighth,336,31.6,68
+1819,09,0042,Homeless,Homeless,28,2.6,68
+1819,09,0042,Migrant,Migrant,0,0.0,68
+1819,09,0042,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,68
+1819,09,0042,Race/Ethnicity,Asian,17,1.6,68
+1819,09,0042,Race/Ethnicity,Black/African American,48,4.5,68
+1819,09,0042,Race/Ethnicity,Hispanic,58,5.5,68
+1819,09,0042,Race/Ethnicity,Multiracial,56,5.3,68
+1819,09,0042,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,68
+1819,09,0042,Race/Ethnicity,White,878,82.5,68
+1819,09,0042,Students with Disabilities,Students with Disabilities,140,13.2,68
+1819,09,0042,Total,Total Students,1064,100.0,68
+1819,09,0061,Economically Disadvantaged,Economically Disadvantaged,302,77.6,28
+1819,09,0061,English Language Learners,English Language Learners,0,0.0,28
+1819,09,0061,Gender,Female,206,53.0,28
+1819,09,0061,Gender,Male,183,47.0,28
+1819,09,0061,Grade Level,PK,25,6.4,28
+1819,09,0061,Grade Level,KG,63,16.2,28
+1819,09,0061,Grade Level,First,50,12.9,28
+1819,09,0061,Grade Level,Second,58,14.9,28
+1819,09,0061,Grade Level,Third,67,17.2,28
+1819,09,0061,Grade Level,Fourth,66,17.0,28
+1819,09,0061,Grade Level,Fifth,60,15.4,28
+1819,09,0061,Homeless,Homeless,0,0.0,28
+1819,09,0061,Migrant,Migrant,0,0.0,28
+1819,09,0061,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,28
+1819,09,0061,Race/Ethnicity,Asian,0,0.0,28
+1819,09,0061,Race/Ethnicity,Black/African American,0,0.0,28
+1819,09,0061,Race/Ethnicity,Hispanic,22,5.7,28
+1819,09,0061,Race/Ethnicity,Multiracial,0,0.0,28
+1819,09,0061,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,28
+1819,09,0061,Race/Ethnicity,White,354,91.0,28
+1819,09,0061,Students with Disabilities,Students with Disabilities,51,13.1,28
+1819,09,0061,Total,Total Students,389,100.0,28
+1819,09,0071,Economically Disadvantaged,Economically Disadvantaged,329,81.6,30
+1819,09,0071,English Language Learners,English Language Learners,0,0.0,30
+1819,09,0071,Gender,Female,192,47.6,30
+1819,09,0071,Gender,Male,211,52.4,30
+1819,09,0071,Grade Level,PK,29,7.2,30
+1819,09,0071,Grade Level,KG,60,14.9,30
+1819,09,0071,Grade Level,First,74,18.4,30
+1819,09,0071,Grade Level,Second,66,16.4,30
+1819,09,0071,Grade Level,Third,61,15.1,30
+1819,09,0071,Grade Level,Fourth,53,13.2,30
+1819,09,0071,Grade Level,Fifth,60,14.9,30
+1819,09,0071,Homeless,Homeless,15,3.7,30
+1819,09,0071,Migrant,Migrant,0,0.0,30
+1819,09,0071,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,30
+1819,09,0071,Race/Ethnicity,Asian,0,0.0,30
+1819,09,0071,Race/Ethnicity,Black/African American,0,0.0,30
+1819,09,0071,Race/Ethnicity,Hispanic,19,4.7,30
+1819,09,0071,Race/Ethnicity,Multiracial,15,3.7,30
+1819,09,0071,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,30
+1819,09,0071,Race/Ethnicity,White,361,89.6,30
+1819,09,0071,Students with Disabilities,Students with Disabilities,74,18.4,30
+1819,09,0071,Total,Total Students,403,100.0,30
+1819,09,0083,Economically Disadvantaged,Economically Disadvantaged,614,71.8,55
+1819,09,0083,English Language Learners,English Language Learners,0,0.0,55
+1819,09,0083,Gender,Female,421,49.2,55
+1819,09,0083,Gender,Male,434,50.8,55
+1819,09,0083,Grade Level,Sixth,285,33.3,55
+1819,09,0083,Grade Level,Seventh,308,36.0,55
+1819,09,0083,Grade Level,Eighth,262,30.6,55
+1819,09,0083,Homeless,Homeless,21,2.5,55
+1819,09,0083,Migrant,Migrant,0,0.0,55
+1819,09,0083,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,55
+1819,09,0083,Race/Ethnicity,Asian,0,0.0,55
+1819,09,0083,Race/Ethnicity,Black/African American,50,5.8,55
+1819,09,0083,Race/Ethnicity,Hispanic,70,8.2,55
+1819,09,0083,Race/Ethnicity,Multiracial,35,4.1,55
+1819,09,0083,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,55
+1819,09,0083,Race/Ethnicity,White,693,81.1,55
+1819,09,0083,Students with Disabilities,Students with Disabilities,120,14.0,55
+1819,09,0083,Total,Total Students,855,100.0,55
+1819,09,0102,Economically Disadvantaged,Economically Disadvantaged,487,76.5,44
+1819,09,0102,English Language Learners,English Language Learners,0,0.0,44
+1819,09,0102,Gender,Female,297,46.6,44
+1819,09,0102,Gender,Male,340,53.4,44
+1819,09,0102,Grade Level,PK,32,5.0,44
+1819,09,0102,Grade Level,KG,96,15.1,44
+1819,09,0102,Grade Level,First,110,17.3,44
+1819,09,0102,Grade Level,Second,101,15.9,44
+1819,09,0102,Grade Level,Third,83,13.0,44
+1819,09,0102,Grade Level,Fourth,103,16.2,44
+1819,09,0102,Grade Level,Fifth,112,17.6,44
+1819,09,0102,Homeless,Homeless,0,0.0,44
+1819,09,0102,Migrant,Migrant,0,0.0,44
+1819,09,0102,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,44
+1819,09,0102,Race/Ethnicity,Asian,0,0.0,44
+1819,09,0102,Race/Ethnicity,Black/African American,35,5.5,44
+1819,09,0102,Race/Ethnicity,Hispanic,44,6.9,44
+1819,09,0102,Race/Ethnicity,Multiracial,43,6.8,44
+1819,09,0102,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,44
+1819,09,0102,Race/Ethnicity,White,509,79.9,44
+1819,09,0102,Students with Disabilities,Students with Disabilities,98,15.4,44
+1819,09,0102,Total,Total Students,637,100.0,44
+1819,09,0121,Economically Disadvantaged,Economically Disadvantaged,758,57.9,69
+1819,09,0121,English Language Learners,English Language Learners,0,0.0,69
+1819,09,0121,Gender,Female,680,51.9,69
+1819,09,0121,Gender,Male,629,48.1,69
+1819,09,0121,Grade Level,PK,11,0.8,69
+1819,09,0121,Grade Level,Ninth,334,25.5,69
+1819,09,0121,Grade Level,Tenth,351,26.8,69
+1819,09,0121,Grade Level,Eleventh,320,24.4,69
+1819,09,0121,Grade Level,Twelfth,293,22.4,69
+1819,09,0121,Homeless,Homeless,25,1.9,69
+1819,09,0121,Migrant,Migrant,0,0.0,69
+1819,09,0121,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,69
+1819,09,0121,Race/Ethnicity,Asian,11,0.8,69
+1819,09,0121,Race/Ethnicity,Black/African American,69,5.3,69
+1819,09,0121,Race/Ethnicity,Hispanic,95,7.3,69
+1819,09,0121,Race/Ethnicity,Multiracial,51,3.9,69
+1819,09,0121,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,69
+1819,09,0121,Race/Ethnicity,White,1078,82.4,69
+1819,09,0121,Students with Disabilities,Students with Disabilities,143,10.9,69
+1819,09,0121,Total,Total Students,1309,100.0,69
+1819,09,0161,Economically Disadvantaged,Economically Disadvantaged,529,65.6,48
+1819,09,0161,English Language Learners,English Language Learners,11,1.4,48
+1819,09,0161,Gender,Female,413,51.2,48
+1819,09,0161,Gender,Male,393,48.8,48
+1819,09,0161,Grade Level,PK,34,4.2,48
+1819,09,0161,Grade Level,KG,113,14.0,48
+1819,09,0161,Grade Level,First,122,15.1,48
+1819,09,0161,Grade Level,Second,138,17.1,48
+1819,09,0161,Grade Level,Third,117,14.5,48
+1819,09,0161,Grade Level,Fourth,140,17.4,48
+1819,09,0161,Grade Level,Fifth,142,17.6,48
+1819,09,0161,Homeless,Homeless,0,0.0,48
+1819,09,0161,Migrant,Migrant,0,0.0,48
+1819,09,0161,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,48
+1819,09,0161,Race/Ethnicity,Asian,14,1.7,48
+1819,09,0161,Race/Ethnicity,Black/African American,13,1.6,48
+1819,09,0161,Race/Ethnicity,Hispanic,77,9.6,48
+1819,09,0161,Race/Ethnicity,Multiracial,35,4.3,48
+1819,09,0161,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,48
+1819,09,0161,Race/Ethnicity,White,661,82.0,48
+1819,09,0161,Students with Disabilities,Students with Disabilities,87,10.8,48
+1819,09,0161,Total,Total Students,806,100.0,48
+1819,09,0162,Economically Disadvantaged,Economically Disadvantaged,484,62.6,45
+1819,09,0162,English Language Learners,English Language Learners,0,0.0,45
+1819,09,0162,Gender,Female,396,51.2,45
+1819,09,0162,Gender,Male,377,48.8,45
+1819,09,0162,Grade Level,Sixth,262,33.9,45
+1819,09,0162,Grade Level,Seventh,266,34.4,45
+1819,09,0162,Grade Level,Eighth,245,31.7,45
+1819,09,0162,Homeless,Homeless,11,1.4,45
+1819,09,0162,Migrant,Migrant,0,0.0,45
+1819,09,0162,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,45
+1819,09,0162,Race/Ethnicity,Asian,30,3.9,45
+1819,09,0162,Race/Ethnicity,Black/African American,28,3.6,45
+1819,09,0162,Race/Ethnicity,Hispanic,55,7.1,45
+1819,09,0162,Race/Ethnicity,Multiracial,21,2.7,45
+1819,09,0162,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,45
+1819,09,0162,Race/Ethnicity,White,634,82.0,45
+1819,09,0162,Students with Disabilities,Students with Disabilities,91,11.8,45
+1819,09,0162,Total,Total Students,773,100.0,45
+1819,09,0163,Economically Disadvantaged,Economically Disadvantaged,858,52.5,85
+1819,09,0163,English Language Learners,English Language Learners,23,1.4,85
+1819,09,0163,Gender,Female,851,52.1,85
+1819,09,0163,Gender,Male,782,47.9,85
+1819,09,0163,Grade Level,Ninth,507,31.0,85
+1819,09,0163,Grade Level,Tenth,413,25.3,85
+1819,09,0163,Grade Level,Eleventh,370,22.7,85
+1819,09,0163,Grade Level,Twelfth,343,21.0,85
+1819,09,0163,Homeless,Homeless,11,0.7,85
+1819,09,0163,Migrant,Migrant,0,0.0,85
+1819,09,0163,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,85
+1819,09,0163,Race/Ethnicity,Asian,68,4.2,85
+1819,09,0163,Race/Ethnicity,Black/African American,59,3.6,85
+1819,09,0163,Race/Ethnicity,Hispanic,180,11.0,85
+1819,09,0163,Race/Ethnicity,Multiracial,59,3.6,85
+1819,09,0163,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,85
+1819,09,0163,Race/Ethnicity,White,1257,77.0,85
+1819,09,0163,Students with Disabilities,Students with Disabilities,177,10.8,85
+1819,09,0163,Total,Total Students,1633,100.0,85
+1819,09,0171,Economically Disadvantaged,Economically Disadvantaged,556,73.5,46
+1819,09,0171,English Language Learners,English Language Learners,0,0.0,46
+1819,09,0171,Gender,Female,355,47.0,46
+1819,09,0171,Gender,Male,401,53.0,46
+1819,09,0171,Grade Level,PK,49,6.5,46
+1819,09,0171,Grade Level,KG,113,14.9,46
+1819,09,0171,Grade Level,First,116,15.3,46
+1819,09,0171,Grade Level,Second,113,14.9,46
+1819,09,0171,Grade Level,Third,124,16.4,46
+1819,09,0171,Grade Level,Fourth,112,14.8,46
+1819,09,0171,Grade Level,Fifth,129,17.1,46
+1819,09,0171,Homeless,Homeless,15,2.0,46
+1819,09,0171,Migrant,Migrant,0,0.0,46
+1819,09,0171,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,46
+1819,09,0171,Race/Ethnicity,Asian,0,0.0,46
+1819,09,0171,Race/Ethnicity,Black/African American,35,4.6,46
+1819,09,0171,Race/Ethnicity,Hispanic,44,5.8,46
+1819,09,0171,Race/Ethnicity,Multiracial,51,6.7,46
+1819,09,0171,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,46
+1819,09,0171,Race/Ethnicity,White,620,82.0,46
+1819,09,0171,Students with Disabilities,Students with Disabilities,103,13.6,46
+1819,09,0171,Total,Total Students,756,100.0,46
+1819,09,0181,Economically Disadvantaged,Economically Disadvantaged,493,69.4,46
+1819,09,0181,English Language Learners,English Language Learners,13,1.8,46
+1819,09,0181,Gender,Female,330,46.5,46
+1819,09,0181,Gender,Male,380,53.5,46
+1819,09,0181,Grade Level,PK,43,6.1,46
+1819,09,0181,Grade Level,KG,111,15.6,46
+1819,09,0181,Grade Level,First,94,13.2,46
+1819,09,0181,Grade Level,Second,104,14.6,46
+1819,09,0181,Grade Level,Third,122,17.2,46
+1819,09,0181,Grade Level,Fourth,110,15.5,46
+1819,09,0181,Grade Level,Fifth,126,17.7,46
+1819,09,0181,Homeless,Homeless,0,0.0,46
+1819,09,0181,Migrant,Migrant,0,0.0,46
+1819,09,0181,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,46
+1819,09,0181,Race/Ethnicity,Asian,0,0.0,46
+1819,09,0181,Race/Ethnicity,Black/African American,33,4.6,46
+1819,09,0181,Race/Ethnicity,Hispanic,103,14.5,46
+1819,09,0181,Race/Ethnicity,Multiracial,39,5.5,46
+1819,09,0181,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,46
+1819,09,0181,Race/Ethnicity,White,526,74.1,46
+1819,09,0181,Students with Disabilities,Students with Disabilities,111,15.6,46
+1819,09,0181,Total,Total Students,710,100.0,46
+1819,09,0191,Economically Disadvantaged,Economically Disadvantaged,437,66.7,42
+1819,09,0191,English Language Learners,English Language Learners,0,0.0,42
+1819,09,0191,Gender,Female,309,47.2,42
+1819,09,0191,Gender,Male,346,52.8,42
+1819,09,0191,Grade Level,PK,51,7.8,42
+1819,09,0191,Grade Level,KG,102,15.6,42
+1819,09,0191,Grade Level,First,103,15.7,42
+1819,09,0191,Grade Level,Second,98,15.0,42
+1819,09,0191,Grade Level,Third,98,15.0,42
+1819,09,0191,Grade Level,Fourth,87,13.3,42
+1819,09,0191,Grade Level,Fifth,116,17.7,42
+1819,09,0191,Homeless,Homeless,0,0.0,42
+1819,09,0191,Migrant,Migrant,0,0.0,42
+1819,09,0191,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,42
+1819,09,0191,Race/Ethnicity,Asian,0,0.0,42
+1819,09,0191,Race/Ethnicity,Black/African American,23,3.5,42
+1819,09,0191,Race/Ethnicity,Hispanic,53,8.1,42
+1819,09,0191,Race/Ethnicity,Multiracial,37,5.6,42
+1819,09,0191,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,42
+1819,09,0191,Race/Ethnicity,White,535,81.7,42
+1819,09,0191,Students with Disabilities,Students with Disabilities,71,10.8,42
+1819,09,0191,Total,Total Students,655,100.0,42
+1819,09,0201,Economically Disadvantaged,Economically Disadvantaged,92,76.7,23
+1819,09,0201,English Language Learners,English Language Learners,0,0.0,23
+1819,09,0201,Gender,Female,33,27.5,23
+1819,09,0201,Gender,Male,87,72.5,23
+1819,09,0201,Grade Level,First,2,1.7,23
+1819,09,0201,Grade Level,Second,4,3.3,23
+1819,09,0201,Grade Level,Third,10,8.3,23
+1819,09,0201,Grade Level,Fourth,6,5.0,23
+1819,09,0201,Grade Level,Fifth,7,5.8,23
+1819,09,0201,Grade Level,Sixth,9,7.5,23
+1819,09,0201,Grade Level,Seventh,9,7.5,23
+1819,09,0201,Grade Level,Eighth,10,8.3,23
+1819,09,0201,Grade Level,Ninth,4,3.3,23
+1819,09,0201,Grade Level,Tenth,6,5.0,23
+1819,09,0201,Grade Level,Eleventh,17,14.2,23
+1819,09,0201,Grade Level,Twelfth,36,30.0,23
+1819,09,0201,Homeless,Homeless,0,0.0,23
+1819,09,0201,Migrant,Migrant,0,0.0,23
+1819,09,0201,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,23
+1819,09,0201,Race/Ethnicity,Asian,0,0.0,23
+1819,09,0201,Race/Ethnicity,Black/African American,0,0.0,23
+1819,09,0201,Race/Ethnicity,Hispanic,14,11.7,23
+1819,09,0201,Race/Ethnicity,Multiracial,0,0.0,23
+1819,09,0201,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,23
+1819,09,0201,Race/Ethnicity,White,89,74.2,23
+1819,09,0201,Students with Disabilities,Students with Disabilities,119,99.2,23
+1819,09,0201,Total,Total Students,120,100.0,23
+1819,09,0211,Economically Disadvantaged,Economically Disadvantaged,528,65.7,48
+1819,09,0211,English Language Learners,English Language Learners,0,0.0,48
+1819,09,0211,Gender,Female,385,47.9,48
+1819,09,0211,Gender,Male,419,52.1,48
+1819,09,0211,Grade Level,Sixth,290,36.1,48
+1819,09,0211,Grade Level,Seventh,265,33.0,48
+1819,09,0211,Grade Level,Eighth,249,31.0,48
+1819,09,0211,Homeless,Homeless,0,0.0,48
+1819,09,0211,Migrant,Migrant,0,0.0,48
+1819,09,0211,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,48
+1819,09,0211,Race/Ethnicity,Asian,0,0.0,48
+1819,09,0211,Race/Ethnicity,Black/African American,38,4.7,48
+1819,09,0211,Race/Ethnicity,Hispanic,108,13.4,48
+1819,09,0211,Race/Ethnicity,Multiracial,37,4.6,48
+1819,09,0211,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,48
+1819,09,0211,Race/Ethnicity,White,609,75.7,48
+1819,09,0211,Students with Disabilities,Students with Disabilities,107,13.3,48
+1819,09,0211,Total,Total Students,804,100.0,48
+1819,09,0215,Economically Disadvantaged,Economically Disadvantaged,51,41.5,7
+1819,09,0215,English Language Learners,English Language Learners,0,0.0,7
+1819,09,0215,Gender,Female,58,47.2,7
+1819,09,0215,Gender,Male,65,52.8,7
+1819,09,0215,Grade Level,Ninth,72,58.5,7
+1819,09,0215,Grade Level,Tenth,51,41.5,7
+1819,09,0215,Homeless,Homeless,0,0.0,7
+1819,09,0215,Migrant,Migrant,0,0.0,7
+1819,09,0215,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,7
+1819,09,0215,Race/Ethnicity,Asian,0,0.0,7
+1819,09,0215,Race/Ethnicity,Black/African American,0,0.0,7
+1819,09,0215,Race/Ethnicity,Hispanic,0,0.0,7
+1819,09,0215,Race/Ethnicity,Multiracial,0,0.0,7
+1819,09,0215,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,7
+1819,09,0215,Race/Ethnicity,White,111,90.2,7
+1819,09,0215,Students with Disabilities,Students with Disabilities,0,0.0,7
+1819,09,0215,Total,Total Students,123,100.0,7
+1819,09,0321,Economically Disadvantaged,Economically Disadvantaged,95,86.4,.
+1819,09,0321,English Language Learners,English Language Learners,0,0.0,.
+1819,09,0321,Gender,Female,30,27.3,.
+1819,09,0321,Gender,Male,80,72.7,.
+1819,09,0321,Grade Level,Sixth,6,5.5,.
+1819,09,0321,Grade Level,Seventh,18,16.4,.
+1819,09,0321,Grade Level,Eighth,33,30.0,.
+1819,09,0321,Grade Level,Ninth,20,18.2,.
+1819,09,0321,Grade Level,Tenth,14,12.7,.
+1819,09,0321,Grade Level,Eleventh,9,8.2,.
+1819,09,0321,Grade Level,Twelfth,10,9.1,.
+1819,09,0321,Homeless,Homeless,0,0.0,.
+1819,09,0321,Migrant,Migrant,0,0.0,.
+1819,09,0321,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,.
+1819,09,0321,Race/Ethnicity,Asian,0,0.0,.
+1819,09,0321,Race/Ethnicity,Black/African American,12,10.9,.
+1819,09,0321,Race/Ethnicity,Hispanic,0,0.0,.
+1819,09,0321,Race/Ethnicity,Multiracial,0,0.0,.
+1819,09,0321,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,.
+1819,09,0321,Race/Ethnicity,White,87,79.1,.
+1819,09,0321,Students with Disabilities,Students with Disabilities,12,10.9,.
+1819,09,0321,Total,Total Students,110,100.0,.
+1819,09,8001,Economically Disadvantaged,Economically Disadvantaged,0,0.0,.
+1819,09,8001,English Language Learners,English Language Learners,0,0.0,.
+1819,09,8001,Gender,Male,82,100.0,.
+1819,09,8001,Grade Level,Eighth,5,6.1,.
+1819,09,8001,Grade Level,Ninth,24,29.3,.
+1819,09,8001,Grade Level,Tenth,25,30.5,.
+1819,09,8001,Grade Level,Eleventh,19,23.2,.
+1819,09,8001,Grade Level,Twelfth,9,11.0,.
+1819,09,8001,Homeless,Homeless,0,0.0,.
+1819,09,8001,Migrant,Migrant,0,0.0,.
+1819,09,8001,Race/Ethnicity,American Indian/Alaskan Native,0,0.0,.
+1819,09,8001,Race/Ethnicity,Asian,0,0.0,.
+1819,09,8001,Race/Ethnicity,Black/African American,67,81.7,.
+1819,09,8001,Race/Ethnicity,Hispanic,0,0.0,.
+1819,09,8001,Race/Ethnicity,Multiracial,0,0.0,.
+1819,09,8001,Race/Ethnicity,Native Hawaiian/Other Pacific Islander,0,0.0,.
+1819,09,8001,Race/Ethnicity,White,14,17.1,.
+1819,09,8001,Students with Disabilities,Students with Disabilities,27,32.9,.
+1819,09,8001,Total,Total Students,82,100.0,.
