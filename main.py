@@ -61,18 +61,23 @@ for i in range(1,68):
 
 print(charters)
 print(others)
+
+for charter in charters:
+    if len(charter)<5:
+        charters.pop(charters.index(charter))
 clusters=copy.deepcopy(charters)
 for cluster in clusters:
     cluster.append([])
 
-print(clusters)
-print(charters)
+#print(clusters)
+#print(charters)
 for school in others:
     min=charters[0]
     for charter in charters:
         if (float(school[2])-float(charter[2]))**2+(float(school[3])-float(charter[3]))**2<(float(school[2])-float(min[2]))**2+(float(school[3])-float(min[3]))**2:
             min=charter
-    print(min)
+    #print(min)
     clusters[charters.index(min)][5].append(min)
 
 print(clusters)
+
