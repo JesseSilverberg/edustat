@@ -88,7 +88,8 @@ print(clusters)
 
 with open('heatmap.csv', 'w') as csvfile:
     writer = csv.writer(csvfile)
+    writer.writerow(["Lat", "Long", "Val"])
     for cluster in clusters:
         cluster[2]
         cluster[3]
-        writer.writerow([cluster[2],cluster[3],0.08+0.07*random()])
+        writer.writerow([cluster[2],cluster[3],0.07*random()])
