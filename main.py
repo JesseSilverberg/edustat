@@ -94,15 +94,20 @@ for school in others:
 print(clusters)
 
 #Format is district id, school id, lat, long, total students, swd, [list of the publics in the same format]
+"""
 
 with open('heatmap.csv', 'w') as csvfile:
     writer = csv.writer(csvfile)
+    writer.writerow(["Lat", "Long", "Val"])
     for cluster in clusters:
         writer.writerow([cluster[2],cluster[3],0.07*random()])
+
+"""
 
 
 with open('clusters.csv', 'w') as csvfile:
     writer = csv.writer(csvfile)
+    writer.writerow(["Lat", "Long", "Charter Count", "Other Count", "Charter Total", "Other Total"])
     for cluster in clusters:
         tot=0
         count=0
@@ -110,5 +115,7 @@ with open('clusters.csv', 'w') as csvfile:
             #print(school)
             tot+=int(school[4])
             count+=int(school[5])
-        writer.writerow([cluster[2],cluster[3],cluster[5],count,cluster[4],tot])
+        # Lat, Long, Charter count, other count, charter total, other total
+        if tot!=0:
+            writer.writerow([cluster[2],cluster[3],cluster[5],count,cluster[4],tot])
 
