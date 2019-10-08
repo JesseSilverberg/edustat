@@ -9,6 +9,8 @@ for (row in 1:nrow(clusters)) {
 qplot(p,binwidth=0.05)
 
 
+
+
 ####
 c(clusters[["Charter.Count"]],clusters[["Other.Count"]])
 chisq.test(c(clusters[["Charter.Count"]],clusters[["Other.Count"]]),n=c(clusters[["Charter.Total"]],clusters[["Other.Total"]]))

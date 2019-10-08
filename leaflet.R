@@ -15,7 +15,7 @@ props=read.csv(file="props.csv", header=TRUE, sep=",")
 
 
 # Data
-data <-read.csv(text=getURL("https://raw.githubusercontent.com/JesseSilverberg/edustat/master/clusters.csv"), header=T)
+data <-read.csv(file="clusters.csv", header=T)
 
 data$Val <- data$Charter.Count/data$Charter.Total-data$Other.Count/data$Other.Total
 data$charterProp <- data$Charter.Count/data$Charter.Total
