@@ -11,6 +11,9 @@ library(ggmap)
 library(viridis)
 library(leaflet)
 
+props=read.csv(file="props.csv", header=TRUE, sep=",")
+
+
 # Data
 data <-read.csv(text=getURL("https://raw.githubusercontent.com/JesseSilverberg/edustat/master/clusters.csv"), header=T)
 
