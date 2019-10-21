@@ -76,16 +76,17 @@ for i in range(1, 68):
                 # print(row)
                 # print(row[5])
 
-print(charters)
-print(others)
-print("f")
-print(props)
+# print(charters)
+# print(others)
+# print(props)
 with open('props.csv', 'w') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(["District", "School", "prop"])
     for prop in props:
+        """
         if prop[2] > .999 and prop[2] > 0.69:
             print("and not (row[1] == '" + prop[0] + "' and row[5] == '" + prop[1] + "')", end=' ')
+        """
         writer.writerow(prop)
 print()
 for charter in charters:
@@ -97,6 +98,17 @@ for cluster in clusters:
 
 # print(clusters)
 # print(charters)
+
+for school in others:
+    min = charters[0]
+    for charter in charters:
+        if charter[0]==school[0] and (float(school[4]) - float(charter[4])) ** 2 + (float(school[5]) - float(charter[5])) ** 2 < (
+                float(school[4]) - float(min[4])) ** 2 + (float(school[5]) - float(min[5])) ** 2:
+            min = charter
+    # print(min)
+    clusters[charters.index(min)][8].append(school)
+
+"""
 for school in others:
     min = charters[0]
     for charter in charters:
@@ -105,12 +117,23 @@ for school in others:
             min = charter
     # print(min)
     clusters[charters.index(min)][8].append(school)
+"""
+
+"""
+for school in others:
+    points=charters.copy()
+    points.sort(key=lambda K: (float(K[4])-float(school[4])) ** 2 + (float(K[5])-float(school[5])) ** 2)
+    print(school)
+    print(points[:2])
+    for point in points:
+        clusters[charters.index(point)][8].append(school)
+"""
 
 print(clusters)
 
 # Format is district id, school id, lat, long, total students, swd, [list of the publics in the same format]
 
-
+alone=0
 with open('clusters.csv', 'w') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(["District Name", "School Name", "Lat", "Long", "Charter Count", "Other Count", "Charter Total", "Other Total"])
@@ -124,3 +147,7 @@ with open('clusters.csv', 'w') as csvfile:
         # Lat, Long, Charter count, other count, charter total, other total
         if tot != 0:
             writer.writerow([cluster[2], cluster[3], cluster[4], cluster[5], cluster[7], count, cluster[6], tot])
+        else:
+            alone+=1
+            print(cluster)
+print(alone)
