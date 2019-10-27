@@ -56,7 +56,12 @@ with open('data/rc_base.csv') as csvfile:
                 charters.append([row[1], row[5], row[3], row[6], row[17], row[18], row[37]])
             else:
                 others.append([row[1], row[5], row[3], row[6], row[17], row[18], row[37]])
-
+"""
+for charter in charters:
+    if charter[0]=='21':
+        print(":S:DGSD:GH")
+        print(charter)
+"""
 props = []
 for i in range(1, 68):
     with open('data/' + str(i) + '.csv') as csvfile:
@@ -64,12 +69,12 @@ for i in range(1, 68):
         for row in reader:
             if row[3] == "Students with Disabilities" and row[2] != '0000':
                 for school in charters:
-                    if school[1] == row[2] and school[0] == row[1]:
+                    if school[1] == row[2] and school[0] == row[1] and int(row[5])>=10:
                         ###SWD count,
                         school.append(row[5])
                         props.append([school[0], school[1], float(school[7]) / float(school[6])])
                 for school in others:
-                    if school[1] == row[2] and school[0] == row[1]:
+                    if school[1] == row[2] and school[0] == row[1] and int(row[5])>=10:
                         school.append(row[5])
                         props.append([school[0], school[1], float(school[7]) / float(school[6])])
 
@@ -89,25 +94,48 @@ with open('props.csv', 'w') as csvfile:
         """
         writer.writerow(prop)
 print()
-for charter in charters:
+for school in others[:]:
+    if len(school) < 8:
+        others.remove(school)
+
+for charter in charters[:]:
     if len(charter) < 8:
-        charters.pop(charters.index(charter))
+        #print("a")
+        #print(charters[charters.index(charter)])
+        #charters.pop(charters.index(charter))
+        charters.remove(charter)
 clusters = copy.deepcopy(charters)
 for cluster in clusters:
     cluster.append([])
 
-# print(clusters)
-# print(charters)
+
+
+print(clusters)
+print(charters)
 
 for school in others:
-    min = charters[0]
+    min = 'none'
     for charter in charters:
-        if charter[0]==school[0] and (float(school[4]) - float(charter[4])) ** 2 + (float(school[5]) - float(charter[5])) ** 2 < (
+        if min=='none' and charter[0]==school[0]:
+            min=charter
+        elif charter[0]==school[0] and (float(school[4]) - float(charter[4])) ** 2 + (float(school[5]) - float(charter[5])) ** 2 < (
                 float(school[4]) - float(min[4])) ** 2 + (float(school[5]) - float(min[5])) ** 2:
             min = charter
     # print(min)
-    clusters[charters.index(min)][8].append(school)
+    """
+    if min=='none':
+        print(school)
+    if school[0] not in ['02','04',"07",'09','14','15','21']:
+        clusters[charters.index(min)][8].append(school)
+    """
+    if min!='none':
+        clusters[charters.index(min)][8].append(school)
 
+for cluster in clusters:
+    for school in cluster[8]:
+        if school[0]!=cluster[0]:
+            print(cluster)
+            print("a")
 """
 for school in others:
     min = charters[0]
