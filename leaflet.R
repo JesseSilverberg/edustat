@@ -29,7 +29,7 @@ data <- data %>%
 #   filter(70 > Val)
 
 # Create a color palette with handmade bins.
-mybins <- seq(-100, 100, by=40)
+mybins <- seq(-20, 20, by=10)
 mypalette <- colorBin( palette="Spectral", domain=data$Val, na.color="transparent", bins=mybins)
 
 # Prepare the text for the tooltip:

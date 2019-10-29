@@ -39,8 +39,9 @@ charters = []
 toRemove = []
 with open('data/remove.csv') as csvfile:
     reader = csv.reader(csvfile)
+    next(reader)
     for row in reader:
-        toRemove.append([row[0], row[1]])
+        toRemove.append([int(row[0]), int(row[1])])
 
 with open('data/rc_base.csv') as csvfile:
     reader = csv.reader(csvfile)
@@ -49,7 +50,7 @@ with open('data/rc_base.csv') as csvfile:
         if row[0] == "1819" and row[5] != '0000' and row[1] not in ['68', '71', '72', '73', '74', '75'] and row[
             5] not in ['8017', '2067', '9022'] and not (row[1] == '16' and row[5] == '0501') and not (
                 row[1] == '53' and row[5] == '1661') and not (row[1] == '53' and row[5] == '1561') and not (
-                row[1] == '50' and row[5] == '2791') and all(school != [row[1], row[5]] for school in toRemove):
+                row[1] == '50' and row[5] == '2791') and all(school != [int(row[1]), int(row[5])] for school in toRemove):
 
             if row[21] == 'YES':
                 # District ID, School ID, District Name, School Name, Lat, Long, Total students
@@ -67,10 +68,11 @@ for i in range(1, 68):
     with open('data/' + str(i) + '.csv') as csvfile:
         reader = csv.reader(csvfile)
         for row in reader:
+            # Don't include district totals (0000)
             if row[3] == "Students with Disabilities" and row[2] != '0000':
                 for school in charters:
                     if school[1] == row[2] and school[0] == row[1] and int(row[5])>=10:
-                        ###SWD count,
+                        # SWD count,
                         school.append(row[5])
                         props.append([school[0], school[1], float(school[7]) / float(school[6])])
                 for school in others:
