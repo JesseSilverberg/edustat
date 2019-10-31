@@ -14,7 +14,7 @@ clusters <- clusters %>%
 
 clusters$threshold <- clusters$pvals < 0.05 
 ggplot(clusters) +
-  geom_point(aes(x=Fold.Change, y=-log10(pvals), colour=threshold))  +
+  geom_point(aes(x=Fold.Change, y=-log10(pvals), colour=threshold))  +xlim(-3,3)+
   ggtitle("Volcano Plot") +
   xlab("log2 Fold Change") + 
   ylab("-log10 p-value") +
