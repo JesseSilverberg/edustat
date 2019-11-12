@@ -64,6 +64,7 @@ for charter in charters:
         print(charter)
 """
 props = []
+minprop=1
 for i in range(1, 68):
     with open('data/' + str(i) + '.csv') as csvfile:
         reader = csv.reader(csvfile)
@@ -75,8 +76,10 @@ for i in range(1, 68):
                         # SWD count,
                         school.append(row[5])
                         props.append([school[0], school[1], float(school[7]) / float(school[6])])
+                        if float(school[7]) / float(school[6])<minprop:
+                            minprop=float(school[7]) / float(school[6])
                 for school in others:
-                    if school[1] == row[2] and school[0] == row[1] and int(row[5])>=10:
+                    if school[1] == row[2] and school[0] == row[1]:
                         school.append(row[5])
                         props.append([school[0], school[1], float(school[7]) / float(school[6])])
 
@@ -86,6 +89,7 @@ for i in range(1, 68):
 # print(charters)
 # print(others)
 # print(props)
+print(minprop)
 with open('props.csv', 'w') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(["District", "School", "prop"])
@@ -174,8 +178,8 @@ with open('clusters.csv', 'w') as csvfile:
             # print(school)
             tot += int(school[6])
             count += int(school[7])
-        # Lat, Long, Charter count, other count, charter total, other total
-        if tot != 0:
+        # District, School, Lat, Long, Charter count, other count, charter total, other total
+        if count>=10:
             writer.writerow([cluster[2], cluster[3], cluster[4], cluster[5], cluster[7], count, cluster[6], tot])
         else:
             alone+=1
