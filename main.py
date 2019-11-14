@@ -65,6 +65,9 @@ for charter in charters:
 """
 props = []
 minprop=1
+
+charterFunds=[]
+otherFunds=[]
 for i in range(1, 68):
     with open('data/' + str(i) + '.csv') as csvfile:
         reader = csv.reader(csvfile)
@@ -72,23 +75,51 @@ for i in range(1, 68):
             # Don't include district totals (0000)
             if row[3] == "Students with Disabilities" and row[2] != '0000':
                 for school in charters:
-                    if school[1] == row[2] and school[0] == row[1] and int(row[5])>=10:
-                        # SWD count,
-                        school.append(row[5])
-                        props.append([school[0], school[1], float(school[7]) / float(school[6])])
-                        if float(school[7]) / float(school[6])<minprop:
-                            minprop=float(school[7]) / float(school[6])
+                    if school[1] == row[2] and school[0] == row[1]:
+                        if int(row[5])>=10:
+                            # SWD count,
+                            school.append(row[5])
+                            props.append([school[0], school[1], float(school[7]) / float(school[6])])
+                            if float(school[7]) / float(school[6])<minprop:
+                                minprop=float(school[7]) / float(school[6])
+                        charterFunds.append([school[0], school[1],float(row[5]) / float(school[6])])
                 for school in others:
                     if school[1] == row[2] and school[0] == row[1]:
                         school.append(row[5])
-                        props.append([school[0], school[1], float(school[7]) / float(school[6])])
+                        if int(row[5])>=10:
+                            props.append([school[0], school[1], float(school[7]) / float(school[6])])
+                        otherFunds.append([school[0], school[1], float(school[7]) / float(school[6])])
 
                 # print(row)
                 # print(row[5])
 
 # print(charters)
 # print(others)
-# print(props)
+# print(props)[-4:]
+
+with open('data/expenditures.csv') as csvfile:
+    reader = csv.reader(csvfile)
+    for row in reader:
+       for charter in charterFunds:
+            if charter[0]==row[0] and charter[1]== row[2]:
+                charter.append(int(row[10].replace(',', '').replace('$', '')))
+       for other in otherFunds:
+           if other[0] == row[0] and other[1] == row[2]:
+               other.append(int(row[10].replace(',', '').replace('$', '')))
+
+with open('charterFunds.csv', 'w') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(["District", "School", "prop","funds"])
+    for charter in charterFunds:
+        writer.writerow(charter)
+
+with open('otherFunds.csv', 'w') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(["District", "School", "prop","funds"])
+    for other in otherFunds:
+        writer.writerow(other)
+
+
 print(minprop)
 with open('props.csv', 'w') as csvfile:
     writer = csv.writer(csvfile)
