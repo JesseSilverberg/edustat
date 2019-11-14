@@ -38,8 +38,8 @@ summary(funds.lm)
 funds.lm<-lm(otherFunds[["funds"]]~otherFunds[["prop"]])
 summary(funds.lm)
 
-ggplot(charterFunds, aes(x=prop, y=funds)) + geom_point() + geom_smooth(method=lm)+ggtitle("Funding vs SWD, Charter Schools")
-ggplot(otherFunds, aes(x=prop, y=funds)) + geom_point() + geom_smooth(method=lm)+ggtitle("Funding vs SWD, Public Schools")
+ggplotly(ggplot(charterFunds, aes(x=prop, y=funds)) + geom_point() + geom_smooth(method=lm)+ggtitle("Funding vs SWD, Charter Schools"))
+ggplotly(ggplot(otherFunds, aes(x=prop, y=funds)) + geom_point() + geom_smooth(method=lm)+ggtitle("Funding vs SWD, Public Schools"))
 
 
 
