@@ -28,13 +28,18 @@ ggplotly(k)
 
 
 
-props<- read.csv(file="props.csv", header=TRUE, sep=",")
-m<-c(0.05,0.07,0.09,0.11,0.15,0.19,0.23)
-x<-c(0.001,0.005,0.006,0.009,0.013,0.02,0.025)
 
-funds.lm<-lm(m ~ x)
-summary(k.lm)
-k.df=data.frame(m,x)
-ggplot(props, aes(x=funds, y=prop)) + geom_point() + geom_smooth(method=lm)+ggtitle("Funding vs SWD")
+charterFunds<- read.csv(file="charterFunds.csv", header=TRUE, sep=",")
+otherFunds<- read.csv(file="otherFunds.csv", header=TRUE, sep=",")
+
+funds.lm<-lm(charterFunds[["prop"]]~charterFunds[["funds"]])
+summary(funds.lm)
+
+funds.lm<-lm(otherFunds[["prop"]]~otherFunds[["funds"]])
+summary(funds.lm)
+
+ggplot(charterFunds, aes(x=funds, y=prop)) + geom_point() + geom_smooth(method=lm)+ggtitle("Funding vs SWD")
+ggplot(otherFunds, aes(x=funds, y=prop)) + geom_point() + geom_smooth(method=lm)+ggtitle("Funding vs SWD")
+
 
 
