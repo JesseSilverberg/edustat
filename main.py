@@ -82,13 +82,13 @@ for i in range(1, 68):
                             props.append([school[0], school[1], float(school[7]) / float(school[6])])
                             if float(school[7]) / float(school[6])<minprop:
                                 minprop=float(school[7]) / float(school[6])
-                        charterFunds.append([school[0], school[1],float(row[5]) / float(school[6])])
+                        charterFunds.append([school[0], school[1],school[3],float(row[5]) / float(school[6])])
                 for school in others:
                     if school[1] == row[2] and school[0] == row[1]:
                         school.append(row[5])
                         if int(row[5])>=10:
                             props.append([school[0], school[1], float(school[7]) / float(school[6])])
-                        otherFunds.append([school[0], school[1], float(school[7]) / float(school[6])])
+                        otherFunds.append([school[0], school[1],school[3], float(school[7]) / float(school[6])])
 
                 # print(row)
                 # print(row[5])
@@ -109,13 +109,13 @@ with open('data/expenditures.csv') as csvfile:
 
 with open('charterFunds.csv', 'w') as csvfile:
     writer = csv.writer(csvfile)
-    writer.writerow(["District", "School", "prop","funds"])
+    writer.writerow(["District", "School","School Name", "prop","funds"])
     for charter in charterFunds:
         writer.writerow(charter)
 
 with open('otherFunds.csv', 'w') as csvfile:
     writer = csv.writer(csvfile)
-    writer.writerow(["District", "School", "prop","funds"])
+    writer.writerow(["District", "School","School Name", "prop","funds"])
     for other in otherFunds:
         writer.writerow(other)
 
