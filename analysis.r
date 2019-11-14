@@ -32,14 +32,14 @@ ggplotly(k)
 charterFunds<- read.csv(file="charterFunds.csv", header=TRUE, sep=",")
 otherFunds<- read.csv(file="otherFunds.csv", header=TRUE, sep=",")
 
-funds.lm<-lm(charterFunds[["prop"]]~charterFunds[["funds"]])
+funds.lm<-lm(charterFunds[["funds"]]~charterFunds[["prop"]])
 summary(funds.lm)
 
-funds.lm<-lm(otherFunds[["prop"]]~otherFunds[["funds"]])
+funds.lm<-lm(otherFunds[["funds"]]~otherFunds[["prop"]])
 summary(funds.lm)
 
-ggplot(charterFunds, aes(x=funds, y=prop)) + geom_point() + geom_smooth(method=lm)+ggtitle("Funding vs SWD")
-ggplot(otherFunds, aes(x=funds, y=prop)) + geom_point() + geom_smooth(method=lm)+ggtitle("Funding vs SWD")
+ggplot(charterFunds, aes(x=prop, y=funds)) + geom_point() + geom_smooth(method=lm)+ggtitle("Funding vs SWD, Charter Schools")
+ggplot(otherFunds, aes(x=prop, y=funds)) + geom_point() + geom_smooth(method=lm)+ggtitle("Funding vs SWD, Public Schools")
 
 
 
