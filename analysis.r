@@ -15,7 +15,7 @@ clusters <- clusters %>%
 
 clusters$threshold <- clusters$pvals < 0.05 
 k <- ggplot(clusters) +
-  geom_point(aes(x=Fold.Change, y=-log10(pvals), colour=threshold, name=School.Name))  +xlim(-3,3)+
+  geom_point(aes(x=Fold.Change, y=-log10(pvals), colour=threshold, text=School.Name))  +xlim(-3,3)+
   ggtitle("Volcano Plot") +
   xlab("log2 Fold Change") + 
   ylab("-log10 p-value") +
@@ -24,7 +24,7 @@ k <- ggplot(clusters) +
         plot.title = element_text(size = rel(1.5), hjust = 0.5),
         axis.title = element_text(size = rel(1.25)))  
 
-ggplotly(k)
+ggplotly(k, tooltip="text")
 
 
 
@@ -38,9 +38,9 @@ summary(funds.lm)
 funds.lm<-lm(otherFunds[["funds"]]~otherFunds[["prop"]])
 summary(funds.lm)
 
-j <- ggplot(charterFunds, aes(x=prop, y=funds)) + geom_point(aes(text=sprintf("Name: %s", School.Name))) + geom_smooth(method=lm)+ggtitle("Funding vs SWD, Charter Schools")
-k <- ggplot(otherFunds, aes(x=prop, y=funds)) + geom_point(aes(text=sprintf("Name: %s", School.Name))) + geom_smooth(method=lm)+ggtitle("Funding vs SWD, Public Schools")
+j <- ggplot(charterFunds, aes(prop, funds)) + geom_point(aes(text=sprintf("Name: %s", School.Name))) + geom_smooth(method=lm)+ggtitle("Funding vs SWD, Charter Schools")
+k <- ggplot(otherFunds, aes(prop, funds)) + geom_point(aes(text=sprintf("Name: %s", School.Name))) + geom_smooth(method=lm)+ggtitle("Funding vs SWD, Public Schools")
 
-ggplotly(j)
-ggplotly(k)
+ggplotly(j, tooltip="text")
+ggplotly(k, tooltip="text")
 
