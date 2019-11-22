@@ -7,12 +7,12 @@ import csv
 import copy
 
 """
-for i in range(1,10):
+for i in range(10,68):
 
     print('Beginning file download with wget module'+str(i))
-
-    url = 'https://edudata.fldoe.org/ReportCards/data/Enrollment/0'+str(i)+'.csv'
-    wget.download(url, 'data/'+str(i)+".csv")
+    url = 'https://edudata.fldoe.org/ReportCards/data/Achievement/' + str(i) + '.csv'
+    #url = 'https://edudata.fldoe.org/ReportCards/data/Enrollment/0'+str(i)+'.csv'
+    wget.download(url, 'data/Achievement/'+str(i)+".csv")
 
 
 options = Options()
@@ -68,8 +68,9 @@ minprop=1
 
 charterFunds=[]
 otherFunds=[]
+
 for i in range(1, 68):
-    with open('data/' + str(i) + '.csv') as csvfile:
+    with open('data/Enrollment/' + str(i) + '.csv') as csvfile:
         reader = csv.reader(csvfile)
         for row in reader:
             # Don't include district totals (0000)
@@ -92,7 +93,47 @@ for i in range(1, 68):
 
                 # print(row)
                 # print(row[5])
+charterAchievement=copy.deepcopy(charters)
+otherAchievement=copy.deepcopy(others)
+for i in range(1, 68):
+    with open('data/Achievement/' + str(i) + '.csv') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            # Don't include district totals (0000)
+            if row[3] == "Students with Disabilities" and row[2] != '0000':
+                for school in charterAchievement:
+                    if school[1] == row[2] and school[0] == row[1]:
+                        temp=[]
+                        for count in range(5,25,2):
+                            temp.append(row[count])
+                        if "*" not in temp:
+                            school.extend(temp)
+                for school in otherAchievement:
+                    if school[1] == row[2] and school[0] == row[1]:
+                        temp = []
+                        for count in range(5,25,2):
+                            temp.extend(row[count])
+                        if "*" not in temp:
+                            school.append(temp)
 
+
+                # print(row)
+                # print(row[5])
+
+with open('charterAchievement.csv', 'w') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(["District Name", "School Name", "Lat", "Long","Total Students","Total SWD",'e1', 'e2', 'e3', 'e4', 'e5', 'm1', 'm2', 'm3', 'm4', 'm5', 's1', 's2', 's3', 's4', 's5', 'sc1', 'sc2', 'sc3', 'sc4', 'sc5'])
+    for school in charterAchievement:
+        if len(school[2:]) == 26:
+            writer.writerow(school[2:])
+with open('otherAchievement.csv', 'w') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(
+        ["District Name", "School Name", "Lat", "Long","Total Students","Total SWD", 'e1', 'e2', 'e3', 'e4', 'e5', 'm1', 'm2', 'm3', 'm4', 'm5',
+         's1', 's2', 's3', 's4', 's5', 'sc1', 'sc2', 'sc3', 'sc4', 'sc5'])
+    for school in otherAchievement:
+        if len(school[2:])==26:
+            writer.writerow(school[2:])
 # print(charters)
 # print(others)
 # print(props)[-4:]
