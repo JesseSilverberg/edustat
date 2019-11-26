@@ -32,6 +32,14 @@ ggplotly(k, tooltip="text")
 charterFunds<- read.csv(file="charterFunds.csv", header=TRUE, sep=",")
 otherFunds<- read.csv(file="otherFunds.csv", header=TRUE, sep=",")
 
+## e_ = English
+## m_ = Math
+## s_ = Social Studies
+## sc_ = Science
+charterAchievement<- read.csv(file="charterAchievement.csv", header=TRUE, sep=",")
+otherAchievement<- read.csv(file="otherAchievement.csv", header=TRUE, sep=",")
+sum(charterAchievement$s1)
+
 funds.lm<-lm(charterFunds[["funds"]]~charterFunds[["prop"]])
 summary(funds.lm)
 
