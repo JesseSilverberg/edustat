@@ -112,9 +112,9 @@ for i in range(1, 68):
                     if school[1] == row[2] and school[0] == row[1]:
                         temp = []
                         for count in range(5,25,2):
-                            temp.extend(row[count])
+                            temp.append(row[count])
                         if "*" not in temp:
-                            school.append(temp)
+                            school.extend(temp)
 
 
                 # print(row)
@@ -208,6 +208,38 @@ for school in others:
     """
     if min!='none':
         clusters[charters.index(min)][8].append(school)
+
+
+print("ACHIEVE")
+print(charterAchievement)
+for school in otherAchievement[:]:
+    if len(school) < 28:
+        otherAchievement.remove(school)
+for charter in charterAchievement[:]:
+    if len(charter) < 28:
+        charterAchievement.remove(charter)
+print(charterAchievement)
+print(otherAchievement)
+clusterAchievement=copy.deepcopy(charterAchievement)
+
+for cluster in clusterAchievement:
+    cluster.append([])
+for school in otherAchievement:
+    min = 'none'
+    for charter in charterAchievement:
+        if min=='none' and charter[0]==school[0]:
+            min=charter
+        elif charter[0]==school[0] and (float(school[4]) - float(charter[4])) ** 2 + (float(school[5]) - float(charter[5])) ** 2 < (
+                float(school[4]) - float(min[4])) ** 2 + (float(school[5]) - float(min[5])) ** 2:
+            min = charter
+    if min!='none':
+        clusterAchievement[charterAchievement.index(min)][29].append(school)
+
+print(clusterAchievement)
+
+
+
+
 
 for cluster in clusters:
     for school in cluster[8]:
