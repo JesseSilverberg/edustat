@@ -233,12 +233,44 @@ for school in otherAchievement:
                 float(school[4]) - float(min[4])) ** 2 + (float(school[5]) - float(min[5])) ** 2:
             min = charter
     if min!='none':
-        clusterAchievement[charterAchievement.index(min)][29].append(school)
-
-print(clusterAchievement)
+        clusterAchievement[charterAchievement.index(min)][28].append(school)
 
 
 
+with open('clusterAchievement.csv', 'w') as csvfile:
+    writer = csv.writer(csvfile)
+    #writer.writerow(["District Name", "School Name", "Lat", "Long","Total Students","Total SWD",'ce1', 'ce2', 'ce3', 'ce4', 'ce5', 'cm1', 'cm2', 'cm3', 'cm4', 'cm5', 'cs1', 'cs2', 'cs3', 'cs4', 'cs5', 'csc1', 'csc2', 'csc3', 'csc4', 'csc5','oe1', 'oe2', 'oe3', 'oe4', 'oe5', 'om1', 'om2', 'om3', 'om4', 'om5', 'os1', 'os2', 'os3', 'os4', 'os5', 'osc1', 'osc2', 'osc3', 'osc4', 'osc5'])
+    writer.writerow(["District Name", "School Name", "Lat", "Long","Total Students","Total SWD",'cte', 'cpe', 'ctm', 'cpm', 'cts', 'cps', 'ctsc', 'cpsc','ote', 'ope', 'otm', 'opm', 'ots', 'ops', 'otsc', 'opsc'])
+
+    for cluster in clusterAchievement:
+        counts=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        for school in cluster[28]:
+            # print(school)
+            for i in range(20):
+                counts[i]+=int(school[i+8])
+        # District, School, Lat, Long, Charter count, other count, charter total, other tota
+        prof=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        #prof=[cluster[8]+cluster[9]+cluster[10]+cluster[11]+cluster[12],cluster[10]+cluster[11]+cluster[12],cluster[13]+cluster[14]+cluster[15]+cluster[16]+cluster[17],cluster[15]+cluster[16]+cluster[17],cluster[18]+cluster[19]+cluster[20]+cluster[21]+cluster[22],cluster[20]+cluster[21]+cluster[22],cluster[23]+cluster[24]+cluster[25]+cluster[26]+cluster[27],cluster[25]+cluster[26]+cluster[27]]
+        for i in range(4):
+            for j in range(5):
+                prof[2*i]+=int(cluster[8+5*i+j])
+            for j in range(2,5):
+                prof[2*i+1] += int(cluster[8 + 5 * i + j])
+
+        for i in range(4):
+            for j in range(5):
+                prof[8+2*i]+=int(counts[5*i+j])
+            for j in range(2,5):
+                prof[8+2*i+1] += int(counts[5 * i + j])
+
+        cluster=cluster[2:8]
+        cluster.extend(prof)
+        send=True
+        for num in cluster[8:]:
+            if int(num)<10:
+                send=False
+        if send:
+            writer.writerow(cluster)
 
 
 for cluster in clusters:
