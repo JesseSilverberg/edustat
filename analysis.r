@@ -175,3 +175,52 @@ k <- ggplot(achieve) +
 ggplotly(k, tooltip="text")
 
 
+
+
+achieve <- achieve %>% rowwise %>% mutate(top = cpe/Charter.Total.SWD/(ope/Other.Total.SWD)-cte/Charter.Total.Students/(ote/Other.Total.Students)) 
+
+achieve <- achieve %>% rowwise %>% mutate(bottom = cpe/Charter.Total.SWD/(cte/Charter.Total.Students)-ope/Other.Total.SWD/(ote/Other.Total.Students)) 
+
+
+
+
+#Top
+achieve <- achieve %>% rowwise %>% mutate(topc = (cpe/Charter.Total.SWD/(ope/Other.Total.SWD)-cte/Charter.Total.Students/(ote/Other.Total.Students))/(cte/Charter.Total.Students/(ote/Other.Total.Students)) )
+achieve <- achieve %>% rowwise %>% mutate(bottomc = (cpe/Charter.Total.SWD/(cte/Charter.Total.Students)-ope/Other.Total.SWD/(ote/Other.Total.Students))/(ope/Other.Total.SWD/(ote/Other.Total.Students))) 
+qplot(achieve$bottomc,bins=20)+ggtitle("English Proficiency Difference") +
+  xlab("Relative Difference") + 
+  ylab("-log10 p-value")
+
+achieve <- achieve %>% rowwise %>% mutate(topc = (cpm/Charter.Total.SWD/(opm/Other.Total.SWD)-ctm/Charter.Total.Students/(otm/Other.Total.Students))/(ctm/Charter.Total.Students/(otm/Other.Total.Students)) )
+achieve <- achieve %>% rowwise %>% mutate(bottomc = (cpm/Charter.Total.SWD/(ctm/Charter.Total.Students)-opm/Other.Total.SWD/(otm/Other.Total.Students))/(opm/Other.Total.SWD/(otm/Other.Total.Students))) 
+qplot(achieve$topc,bins=20)+ggtitle("Math Proficiency Difference") +
+  xlab("Relative Difference") + 
+  ylab("-log10 p-value")
+
+achieve <- achieve %>% rowwise %>% mutate(topc = (cpsc/Charter.Total.SWD/(opsc/Other.Total.SWD)-ctsc/Charter.Total.Students/(otsc/Other.Total.Students))/(ctsc/Charter.Total.Students/(otsc/Other.Total.Students)) )
+achieve <- achieve %>% rowwise %>% mutate(bottomc = (cpsc/Charter.Total.SWD/(ctsc/Charter.Total.Students)-opsc/Other.Total.SWD/(otsc/Other.Total.Students))/(opsc/Other.Total.SWD/(otsc/Other.Total.Students))) 
+qplot(achieve$bottomc,bins=20)+ggtitle("Science Proficiency Difference") +
+  xlab("Relative Difference") + 
+  ylab("-log10 p-value")
+
+achieve <- achieve %>% rowwise %>% mutate(topc = (cps/Charter.Total.SWD/(ops/Other.Total.SWD)-cts/Charter.Total.Students/(ots/Other.Total.Students))/(cts/Charter.Total.Students/(ots/Other.Total.Students)) )
+achieve <- achieve %>% rowwise %>% mutate(bottomc = (cps/Charter.Total.SWD/(cts/Charter.Total.Students)-ops/Other.Total.SWD/(ots/Other.Total.Students))/(ops/Other.Total.SWD/(ots/Other.Total.Students))) 
+qplot(achieve$topc,bins=20)+ggtitle("Social Studies Proficiency Difference") +
+  xlab("Relative Difference") + 
+  ylab("-log10 p-value")
+
+
+
+
+
+achieve <- achieve %>% rowwise %>% mutate(one = cpe/Charter.Total.SWD)
+achieve <- achieve %>% rowwise %>% mutate(two = cte/Charter.Total.Students)
+achieve <- achieve %>% rowwise %>% mutate(three = ope/Other.Total.SWD)
+achieve <- achieve %>% rowwise %>% mutate(four = ote/Other.Total.Students)
+
+qplot(two,one,data=achieve)
+qplot(achieve$top)
+qplot(achieve$bottom,bins=20)
+
+qplot(achieve$topc,bins=20)
+qplot(achieve$bottomc,bins=20)

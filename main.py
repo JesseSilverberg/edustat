@@ -100,18 +100,19 @@ for i in range(1, 68):
         reader = csv.reader(csvfile)
         for row in reader:
             # Don't include district totals (0000)
-            if row[3] == "Students with Disabilities" and row[2] != '0000':
+            if row[0]=="1819" and row[3] == "Students with Disabilities" and row[2] != '0000':
                 for school in charterAchievement:
                     if school[1] == row[2] and school[0] == row[1]:
                         temp=[]
-                        for count in range(5,25,2):
+                        for count in range(45,53,2):
                             temp.append(row[count])
+
                         if "*" not in temp:
                             school.extend(temp)
                 for school in otherAchievement:
                     if school[1] == row[2] and school[0] == row[1]:
                         temp = []
-                        for count in range(5,25,2):
+                        for count in range(45,53,2):
                             temp.append(row[count])
                         if "*" not in temp:
                             school.extend(temp)
@@ -120,19 +121,41 @@ for i in range(1, 68):
                 # print(row)
                 # print(row[5])
 
+
+for i in range(1, 68):
+    with open('data/Achievement/' + str(i) + '.csv') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            # Don't include district totals (0000)
+            if row[0]=="1819" and row[3] == "Total Students" and row[2] != '0000':
+                for school in charterAchievement:
+                    if school[1] == row[2] and school[0] == row[1]:
+                        temp=[]
+                        for count in range(45,53,2):
+                            temp.append(row[count])
+                        if "*" not in temp:
+                            school.extend(temp)
+                for school in otherAchievement:
+                    if school[1] == row[2] and school[0] == row[1]:
+                        temp = []
+                        for count in range(45,53,2):
+                            temp.append(row[count])
+                        if "*" not in temp:
+                            school.extend(temp)
+
+
+#First the SWD data, then the overall popuation of the school data
 with open('charterAchievement.csv', 'w') as csvfile:
     writer = csv.writer(csvfile)
-    writer.writerow(["District Name", "School Name", "Lat", "Long","Total Students","Total SWD",'e1', 'e2', 'e3', 'e4', 'e5', 'm1', 'm2', 'm3', 'm4', 'm5', 's1', 's2', 's3', 's4', 's5', 'sc1', 'sc2', 'sc3', 'sc4', 'sc5'])
+    writer.writerow(["District Name", "School Name", "Lat", "Long","Total Students","Total SWD",'e','s','m','sc','te','ts','tm','tsc'])
     for school in charterAchievement:
-        if len(school[2:]) == 26:
+        if len(school[2:]) == 14:
             writer.writerow(school[2:])
 with open('otherAchievement.csv', 'w') as csvfile:
     writer = csv.writer(csvfile)
-    writer.writerow(
-        ["District Name", "School Name", "Lat", "Long","Total Students","Total SWD", 'e1', 'e2', 'e3', 'e4', 'e5', 'm1', 'm2', 'm3', 'm4', 'm5',
-         's1', 's2', 's3', 's4', 's5', 'sc1', 'sc2', 'sc3', 'sc4', 'sc5'])
+    writer.writerow(["District Name", "School Name", "Lat", "Long","Total Students","Total SWD",'e','s','m','sc','te','ts','tm','tsc'])
     for school in otherAchievement:
-        if len(school[2:])==26:
+        if len(school[2:])==14:
             writer.writerow(school[2:])
 # print(charters)
 # print(others)
@@ -188,8 +211,8 @@ for cluster in clusters:
 
 
 
-print(clusters)
-print(charters)
+#print(clusters)
+#print(charters)
 
 for school in others:
     min = 'none'
@@ -213,10 +236,10 @@ for school in others:
 print("ACHIEVE")
 print(charterAchievement)
 for school in otherAchievement[:]:
-    if len(school) < 28:
+    if len(school) < 16:
         otherAchievement.remove(school)
 for charter in charterAchievement[:]:
-    if len(charter) < 28:
+    if len(charter) < 16:
         charterAchievement.remove(charter)
 print(charterAchievement)
 print(otherAchievement)
@@ -233,23 +256,38 @@ for school in otherAchievement:
                 float(school[4]) - float(min[4])) ** 2 + (float(school[5]) - float(min[5])) ** 2:
             min = charter
     if min!='none':
-        clusterAchievement[charterAchievement.index(min)][28].append(school)
+        clusterAchievement[charterAchievement.index(min)][16].append(school)
 
 
 
 with open('clusterAchievement.csv', 'w') as csvfile:
     writer = csv.writer(csvfile)
     #writer.writerow(["District Name", "School Name", "Lat", "Long","Total Students","Total SWD",'ce1', 'ce2', 'ce3', 'ce4', 'ce5', 'cm1', 'cm2', 'cm3', 'cm4', 'cm5', 'cs1', 'cs2', 'cs3', 'cs4', 'cs5', 'csc1', 'csc2', 'csc3', 'csc4', 'csc5','oe1', 'oe2', 'oe3', 'oe4', 'oe5', 'om1', 'om2', 'om3', 'om4', 'om5', 'os1', 'os2', 'os3', 'os4', 'os5', 'osc1', 'osc2', 'osc3', 'osc4', 'osc5'])
-    writer.writerow(["District Name", "School Name", "Lat", "Long","Total Students","Total SWD",'cte', 'cpe', 'ctm', 'cpm', 'cts', 'cps', 'ctsc', 'cpsc','ote', 'ope', 'otm', 'opm', 'ots', 'ops', 'otsc', 'opsc'])
-
+    writer.writerow(["District Name", "School Name", "Lat", "Long","Charter Total Students","Charter Total SWD",'cpe', 'cps', 'cpm', 'cpsc', 'cte', 'cts', 'ctm', 'ctsc',"Other Total Students","Other Total SWD",'ope', 'ops', 'opm', 'opsc', 'ote', 'ots', 'otm', 'otsc'])
     for cluster in clusterAchievement:
-        counts=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-        for school in cluster[28]:
+        counts = [0,0,0, 0, 0, 0,0,0,0,0]
+        for school in cluster[16]:
             # print(school)
-            for i in range(20):
+            for i in range(10):
+                counts[i] += int(school[i + 6])
+
+        cluster = cluster[2:16]
+        cluster.extend(counts)
+        send = True
+        for num in cluster[6:]:
+            if int(num) < 10:
+                send = True#False
+        if send:
+            writer.writerow(cluster)
+    """
+    for cluster in clusterAchievement:
+        counts=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        for school in cluster[48]:
+            # print(school)
+            for i in range(40):
                 counts[i]+=int(school[i+8])
         # District, School, Lat, Long, Charter count, other count, charter total, other tota
-        prof=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        prof=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
         #prof=[cluster[8]+cluster[9]+cluster[10]+cluster[11]+cluster[12],cluster[10]+cluster[11]+cluster[12],cluster[13]+cluster[14]+cluster[15]+cluster[16]+cluster[17],cluster[15]+cluster[16]+cluster[17],cluster[18]+cluster[19]+cluster[20]+cluster[21]+cluster[22],cluster[20]+cluster[21]+cluster[22],cluster[23]+cluster[24]+cluster[25]+cluster[26]+cluster[27],cluster[25]+cluster[26]+cluster[27]]
         for i in range(4):
             for j in range(5):
@@ -271,6 +309,7 @@ with open('clusterAchievement.csv', 'w') as csvfile:
                 send=False
         if send:
             writer.writerow(cluster)
+        """
 
 
 for cluster in clusters:
