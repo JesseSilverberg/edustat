@@ -1,6 +1,7 @@
 library(ggplot2)
 library(tidyverse)
 library(plotly)
+library(e1071) 
 
 clusters<- read.csv(file="clusters.csv", header=TRUE, sep=",")
 
@@ -16,7 +17,7 @@ clusters <- clusters %>%
 clusters$threshold <- clusters$pvals < 0.05
 k <- ggplot(clusters) +
   geom_point(aes(x=Fold.Change, y=-log10(pvals), colour=threshold, text=sprintf("%s<br>Fold Change: %s <br> P-Value: %s", School.Name, Fold.Change, -log10(pvals))))  +xlim(-3,3)+
-  ggtitle("Volcano Plot") +
+  ggtitle("SWD Enrollment Comparison") +
   xlab("log2 Fold Change") + 
   ylab("-log10 p-value") +
   #scale_y_continuous(limits = c(0,50)) +
@@ -38,12 +39,11 @@ summary(funds.lm)
 funds.lm<-lm(otherFunds[["funds"]]~otherFunds[["prop"]])
 summary(funds.lm)
 
-j <- ggplot(charterFunds, aes(prop, funds)) + geom_point(aes(text=sprintf("%s<br>Proportion: %s <br> Funds: %s", School.Name, prop, funds))) + geom_smooth(method=lm)+ggtitle("Funding vs SWD, Charter Schools")
-k <- ggplot(otherFunds, aes(prop, funds)) + geom_point(aes(text=sprintf("%s<br>Proportion: %s <br> Funds: %s", School.Name, prop, funds))) + geom_smooth(method=lm)+ggtitle("Funding vs SWD, Public Schools")
+j <- ggplot(charterFunds, aes(prop, funds)) + geom_point(aes(text=sprintf("%s<br>Proportion: %s <br> Funds: %s", School.Name, prop, funds)),size=.6,alpha=0.45) + geom_smooth(method=lm)+ggtitle("Charter School Funding vs SWD Proportion")+xlab("SWD Proportion") + ylab("Funding ($)")
+k <- ggplot(otherFunds, aes(prop, funds)) + geom_point(aes(text=sprintf("%s<br>Proportion: %s <br> Funds: %s", School.Name, prop, funds)),size=.6,alpha=0.45) + geom_smooth(method=lm)+ggtitle("Public School Funding vs SWD Proportion")+xlab("SWD Proportion") + ylab("Funding ($)")
 
 ggplotly(j, tooltip="text")
 ggplotly(k, tooltip="text")
-
 
 
 
@@ -187,28 +187,43 @@ achieve <- achieve %>% rowwise %>% mutate(bottom = cpe/Charter.Total.SWD/(cte/Ch
 #Top
 achieve <- achieve %>% rowwise %>% mutate(topc = (cpe/Charter.Total.SWD/(ope/Other.Total.SWD)-cte/Charter.Total.Students/(ote/Other.Total.Students))/(cte/Charter.Total.Students/(ote/Other.Total.Students)) )
 achieve <- achieve %>% rowwise %>% mutate(bottomc = (cpe/Charter.Total.SWD/(cte/Charter.Total.Students)-ope/Other.Total.SWD/(ote/Other.Total.Students))/(ope/Other.Total.SWD/(ote/Other.Total.Students))) 
-qplot(achieve$bottomc,bins=20)+ggtitle("English Proficiency Difference") +
+qplot(achieve$bottomc,bins=16)+ggtitle("English Proficiency Difference") +
   xlab("Relative Difference") + 
-  ylab("-log10 p-value")
+  ylab("Count")
+
+skewness(achieve$bottomc,na.rm=TRUE)
+kurtosis(achieve$bottomc,na.rm=TRUE)
 
 achieve <- achieve %>% rowwise %>% mutate(topc = (cpm/Charter.Total.SWD/(opm/Other.Total.SWD)-ctm/Charter.Total.Students/(otm/Other.Total.Students))/(ctm/Charter.Total.Students/(otm/Other.Total.Students)) )
 achieve <- achieve %>% rowwise %>% mutate(bottomc = (cpm/Charter.Total.SWD/(ctm/Charter.Total.Students)-opm/Other.Total.SWD/(otm/Other.Total.Students))/(opm/Other.Total.SWD/(otm/Other.Total.Students))) 
-qplot(achieve$topc,bins=20)+ggtitle("Math Proficiency Difference") +
+qplot(achieve$topc,bins=18)+ggtitle("Math Proficiency Difference") +
   xlab("Relative Difference") + 
-  ylab("-log10 p-value")
+  ylab("Count")
+
+
+skewness(achieve$bottomc,na.rm=TRUE)
+kurtosis(achieve$bottomc,na.rm=TRUE)
 
 achieve <- achieve %>% rowwise %>% mutate(topc = (cpsc/Charter.Total.SWD/(opsc/Other.Total.SWD)-ctsc/Charter.Total.Students/(otsc/Other.Total.Students))/(ctsc/Charter.Total.Students/(otsc/Other.Total.Students)) )
 achieve <- achieve %>% rowwise %>% mutate(bottomc = (cpsc/Charter.Total.SWD/(ctsc/Charter.Total.Students)-opsc/Other.Total.SWD/(otsc/Other.Total.Students))/(opsc/Other.Total.SWD/(otsc/Other.Total.Students))) 
-qplot(achieve$bottomc,bins=20)+ggtitle("Science Proficiency Difference") +
+qplot(achieve$bottomc,bins=15)+ggtitle("Science Proficiency Difference") +
   xlab("Relative Difference") + 
-  ylab("-log10 p-value")
+  ylab("Count")
+
+
+skewness(achieve$bottomc,na.rm=TRUE)
+kurtosis(achieve$bottomc,na.rm=TRUE)
 
 achieve <- achieve %>% rowwise %>% mutate(topc = (cps/Charter.Total.SWD/(ops/Other.Total.SWD)-cts/Charter.Total.Students/(ots/Other.Total.Students))/(cts/Charter.Total.Students/(ots/Other.Total.Students)) )
 achieve <- achieve %>% rowwise %>% mutate(bottomc = (cps/Charter.Total.SWD/(cts/Charter.Total.Students)-ops/Other.Total.SWD/(ots/Other.Total.Students))/(ops/Other.Total.SWD/(ots/Other.Total.Students))) 
-qplot(achieve$topc,bins=20)+ggtitle("Social Studies Proficiency Difference") +
+qplot(achieve$topc,bins=12)+ggtitle("Social Studies Proficiency Difference") +
   xlab("Relative Difference") + 
-  ylab("-log10 p-value")
+  ylab("Count")
 
+
+
+skewness(achieve$bottomc,na.rm=TRUE)
+kurtosis(achieve$bottomc,na.rm=TRUE)
 
 
 
@@ -224,3 +239,4 @@ qplot(achieve$bottom,bins=20)
 
 qplot(achieve$topc,bins=20)
 qplot(achieve$bottomc,bins=20)
+
