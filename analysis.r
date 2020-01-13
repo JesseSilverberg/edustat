@@ -195,7 +195,7 @@ achieve <- achieve %>% rowwise %>% mutate(bottom = cpe/Charter.Total.SWD/(cte/Ch
 #Top
 achieve <- achieve %>% rowwise %>% mutate(topc = (cpe/Charter.Total.SWD/(ope/Other.Total.SWD)-cte/Charter.Total.Students/(ote/Other.Total.Students))/(cte/Charter.Total.Students/(ote/Other.Total.Students)) )
 achieve <- achieve %>% rowwise %>% mutate(bottomc = (cpe/Charter.Total.SWD/(cte/Charter.Total.Students)-ope/Other.Total.SWD/(ote/Other.Total.Students))/(ope/Other.Total.SWD/(ote/Other.Total.Students))) 
-qplot(achieve$bottomc,bins=16)+ggtitle("English Proficiency Difference") +
+qplot(achieve$bottomc,bins=16)+ggtitle("English Proficiency Difference") + xlim(-2.5,2.5) +
   xlab("Relative Difference") + 
   ylab("Count")
 
@@ -204,7 +204,7 @@ kurtosis(achieve$bottomc,na.rm=TRUE)
 
 achieve <- achieve %>% rowwise %>% mutate(topc = (cpm/Charter.Total.SWD/(opm/Other.Total.SWD)-ctm/Charter.Total.Students/(otm/Other.Total.Students))/(ctm/Charter.Total.Students/(otm/Other.Total.Students)) )
 achieve <- achieve %>% rowwise %>% mutate(bottomc = (cpm/Charter.Total.SWD/(ctm/Charter.Total.Students)-opm/Other.Total.SWD/(otm/Other.Total.Students))/(opm/Other.Total.SWD/(otm/Other.Total.Students))) 
-qplot(achieve$topc,bins=18)+ggtitle("Math Proficiency Difference") +
+qplot(achieve$topc,bins=18)+ggtitle("Math Proficiency Difference") +xlim(-2.5,2.5) +
   xlab("Relative Difference") + 
   ylab("Count")
 
@@ -214,7 +214,7 @@ kurtosis(achieve$bottomc,na.rm=TRUE)
 
 achieve <- achieve %>% rowwise %>% mutate(topc = (cpsc/Charter.Total.SWD/(opsc/Other.Total.SWD)-ctsc/Charter.Total.Students/(otsc/Other.Total.Students))/(ctsc/Charter.Total.Students/(otsc/Other.Total.Students)) )
 achieve <- achieve %>% rowwise %>% mutate(bottomc = (cpsc/Charter.Total.SWD/(ctsc/Charter.Total.Students)-opsc/Other.Total.SWD/(otsc/Other.Total.Students))/(opsc/Other.Total.SWD/(otsc/Other.Total.Students))) 
-qplot(achieve$bottomc,bins=15)+ggtitle("Science Proficiency Difference") +
+qplot(achieve$bottomc,bins=15)+ggtitle("Science Proficiency Difference") +xlim(-2.5,2.5) +
   xlab("Relative Difference") + 
   ylab("Count")
 
@@ -224,7 +224,7 @@ kurtosis(achieve$bottomc,na.rm=TRUE)
 
 achieve <- achieve %>% rowwise %>% mutate(topc = (cps/Charter.Total.SWD/(ops/Other.Total.SWD)-cts/Charter.Total.Students/(ots/Other.Total.Students))/(cts/Charter.Total.Students/(ots/Other.Total.Students)) )
 achieve <- achieve %>% rowwise %>% mutate(bottomc = (cps/Charter.Total.SWD/(cts/Charter.Total.Students)-ops/Other.Total.SWD/(ots/Other.Total.Students))/(ops/Other.Total.SWD/(ots/Other.Total.Students))) 
-qplot(achieve$topc,bins=12)+ggtitle("Social Studies Proficiency Difference") +
+qplot(achieve$topc,bins=12)+ggtitle("Social Studies Proficiency Difference") +xlim(-2.5,2.5) +
   xlab("Relative Difference") + 
   ylab("Count")
 
